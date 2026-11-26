@@ -1,0 +1,371 @@
+
+/* GLOBAL STYLES */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    background-image: linear-gradient(-35deg, rgb(49, 150, 204), rgb(138, 163, 248), rgb(215, 221, 249));
+    color: #262d35;
+    line-height: 1.6;
+}
+
+main{
+    flex: 1;
+}
+
+/* HEADER AND NAVIGATION */
+.header{
+    background-color: #173B70;
+    color: white;
+    padding: 20px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.name{
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.navigation{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.nav-btn{
+    background: transparent;
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+.nav-btn:hover{
+    background-color: #03162e;
+}
+
+
+.nav-btn.active{
+    background-color: #3479CE;
+}
+
+/* MAIN LAYOUT */
+.container{
+    width: 90%;
+    max-width: 1100px;
+    margin: 35px auto;
+}
+
+.page-section{
+    display: none;
+}
+
+.page-section.active{
+    display: block;
+}
+
+.welcome {
+    margin-bottom: 25px;
+}
+
+.welcome h1,
+.page-section h1{
+    color: #173B70;
+    margin-bottom: 8px;
+}
+
+/* DASHBOARD STATISTICS */
+.stats-grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    margin: 25px 0;
+}
+
+.stat-card{
+    background: rgba(254, 254, 254, 0.888);
+    padding: 22px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.479);
+}
+
+.stat-card h2{
+    font-size: 1.3rem;
+    color: #5a6778;
+}
+
+.stat-card p{
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #2563A8;
+    margin-top: 8px;
+}
+
+/* PROGRESS BAR */
+.progress-track{
+    width: 100%;
+    height: 1rem;
+    background-color: #c2d3e8;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-top: 12px;
+}
+
+.progress-fill{
+    width: 0%;
+    height: 100%;
+    background-color: #037124;
+    transition: width 0.4s ease;
+}
+
+/* GENERAL CARDS AND FORM */
+.card{
+    background: rgba(255, 255, 255, 0.932);
+    padding: 25px;
+    border-radius: 12px;
+    margin: 20px 0;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.701);
+}
+
+.card h2{
+    color: #223551;
+    margin-bottom: 15px;
+}
+
+form label{
+    display: block;
+    font-weight: bold;
+    margin: 13px 0 6px;
+}
+
+input,
+select{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #CFD9E6;
+    border-radius: 7px;
+    font-size: 1rem;
+    background-color: white;
+}
+
+input:focus,
+select:focus{
+    outline: 2px solid #3479CE;
+    border-color: transparent;
+}
+
+/* BUTTONS */
+.primary-btn{
+    background-color: #2563A8;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    margin-top: 18px;
+    border-radius: 7px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.primary-btn:hover{
+    background-color: #173B70;
+}
+
+.action-btn{
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 4px;
+}
+
+.complete-btn{
+    background: #DDF5E7;
+    color: #167443;
+}
+
+.edit-btn{
+    background: #E2EEFC;
+    color: #245A9A;
+}
+
+.delete-btn{
+    background: #FCE5E5;
+    color: #B42323;
+}
+
+/* ASSIGNMENT AND GRADE ITEMS */
+.assignment-item,
+.grade-item{
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 15px 0;
+    border-left: 5px solid #3479CE;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.04);
+}
+
+.assignment-item.completed{
+    border-left-color: #16A36A;
+}
+
+.assignment-item h3,
+.grade-item h3{
+    color: #173B70;
+}
+
+.assignment-item p,
+.grade-item p{
+    margin: 5px 0;
+}
+
+.message{
+    margin-top: 12px;
+    color: #167443;
+    font-weight: bold;
+}
+
+.filter-controls{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+/* FOOTER */
+footer{
+    background-color: #173B70;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+footer a{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+footer a:hover{
+    background-color: rgb(141, 141, 245);
+    border-radius: 10px;
+    padding: 4px;
+    color:#0a0a0a;
+    font-style:oblique;
+    font-weight: bold;
+}
+
+footer p{
+
+    font-size: .8rem;
+}
+
+footer a:focus{
+    color: rgb(223, 223, 223);
+    outline: 3px solid rgb(5, 5, 5);
+}
+
+/* PRIVACY POLICY */
+.privacy{
+    text-align: center;
+    background-color: rgb(240, 240, 240);
+}
+
+.privacy-container{
+    background-image: linear-gradient(-45deg, rgba(196, 196, 206, 0.651), rgb(231, 231, 235));
+    border-radius: 0px 20px 45px;
+    border: 1px solid black;
+    color: rgb(39, 39, 39);
+    max-width: 900px;
+    width: calc(100% - 4rem);
+    margin: 2rem auto;
+    padding: 10px;
+    line-height: 1.8;
+    font-size: 1.2rem;
+}
+
+.privacy-container h1{
+    text-align: center;
+    margin-bottom: 30px;
+    text-decoration: underline;
+}
+
+.privacy-container h2{
+    margin-top: 30px;
+    color: #1e1d1f;
+}
+
+.back-link a{
+    text-align: center;
+    margin: 20px;
+    color: white;
+}
+
+.back-link a:hover{
+    text-decoration: none;
+    font-weight: bold;
+    color: rgb(12, 12, 12);
+}
+
+.back-link a:visited{
+    color: rgb(0, 0, 0);
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 375px){
+    .container{
+        width: 94%;
+        margin: 10px;
+    }
+    .stats-grid{
+        grid-template-columns: 1fr;
+    }
+    .navigation{
+        width: 100%;
+        justify-content: center;
+    }
+    .nav-btn{
+        padding: 9px;
+        font-size: 12px;
+    }
+    .filter-controls{
+        grid-template-columns: 1fr;
+    }
+    .card{
+        padding: 17px;
+    }
+}
+
+@media (max-width: 768px){
+    .container{
+        width: 94%;
+        margin: 10px;
+    }
+    .stats-grid{
+        grid-template-columns: 1fr;
+    }
+    .navigation{
+        width: 100%;
+        justify-content: center;
+    }
+    .nav-btn{
+        padding: 9px;
+        font-size: 12px;
+    }
+    .filter-controls{
+        grid-template-columns: 1fr;
+    }
+    .card{
+        padding: 17px;
+    }
+}
